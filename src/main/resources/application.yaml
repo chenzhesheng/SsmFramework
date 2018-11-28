@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/student?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: zsonchen
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # 新增数据库链接必备的参数
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: com.zson.ssmframework.bean
+
+logging:
+  level:
+    com.zson.springboot.mapper: trace
+    org:
+      springframework: DEBUG
