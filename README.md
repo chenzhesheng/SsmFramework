@@ -1,2 +1,2 @@
 # SsmFramework
-Spring Boot  + SSM 架构
+Spring Boot  + Spring + Spring MVC + Mybatis + Redis

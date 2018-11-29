@@ -24,3 +24,9 @@ logging:
     com.zson.springboot.mapper: trace
     org:
       springframework: DEBUG
+# ≈‰÷√∑÷“≥≤Âº˛pagehelper
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
