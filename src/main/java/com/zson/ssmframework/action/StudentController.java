@@ -1,6 +1,5 @@
 package com.zson.ssmframework.action;
 
-import com.github.pagehelper.PageHelper;
 import com.zson.ssmframework.bean.Student;
 import com.zson.ssmframework.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ public class StudentController {
 
     @RequestMapping("/listStudent")
     public String listStudent(Model model){
-        PageHelper.startPage(1,2);
+//        PageHelper.startPage(1,2);
         List<Student> students = studentService.findStudentAll();
         model.addAttribute("students",students);
         return "listStudent";

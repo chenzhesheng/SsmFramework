@@ -7,13 +7,13 @@ spring:
       prefix: /WEB-INF/views/
       suffix: .jsp
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/student?useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/student?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     username: root
     password: zsonchen
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: update # 新增数据库链接必备的参数
+      ddl-auto: update
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml
@@ -21,12 +21,6 @@ mybatis:
 
 logging:
   level:
-    com.zson.springboot.mapper: trace
+    com.zson.ssmframework.mapper: trace
     org:
       springframework: DEBUG
-# 配置分页插件pagehelper
-pagehelper:
-  helperDialect: mysql
-  reasonable: true
-  supportMethodsArguments: true
-  params: count=countSql
