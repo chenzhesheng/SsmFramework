@@ -66,6 +66,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.13</version>
         </dependency>
 
         <!--无需重启的热部署-->
