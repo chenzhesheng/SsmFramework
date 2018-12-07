@@ -18,15 +18,11 @@ public class StudentController {
     @Autowired
     StudentService studentService;
 
-
-
     @RequestMapping("/listStudent")
     public String listStudent(Model model){
-        PageHelper.startPage(1,2);
+        PageHelper.startPage(1,3);
         List<Student> students = studentService.findStudentAll();
-        PageInfo<Student> pageInfo = new PageInfo<>(students);
         model.addAttribute("students",students);
-        model.addAttribute("page", pageInfo);
         return "listStudent";
     }
 

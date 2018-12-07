@@ -16,7 +16,6 @@ public class SsmframeworkApplication {
         SpringApplication.run(SsmframeworkApplication.class, args);
     }
 
-
     @Bean
     public PageHelper pageHelper() {
         PageHelper pageHelper = new PageHelper();

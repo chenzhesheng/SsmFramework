@@ -1,2 +1,2 @@
 # SsmFramework
-Spring Boot  + Spring + Spring MVC + Mybatis + Redis
+Spring Boot + Mybatis + Redis + PageHelper 
