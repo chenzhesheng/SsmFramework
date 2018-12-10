@@ -4,10 +4,12 @@ import com.github.pagehelper.PageHelper;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 
 import java.util.Properties;
 
+@EnableCaching  //开启缓存
 @SpringBootApplication
 @MapperScan("com.zson.ssmframework.dao")
 public class SsmframeworkApplication {
