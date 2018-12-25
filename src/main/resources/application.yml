@@ -25,14 +25,19 @@ spring:
         max-wait: -1ms
         max-idle: 8
         min-idle: 0
-    timeout: 5000ms
+    timeout: 20000ms
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml
   typeAliasesPackage: com.zson.ssmframework.bean
 
+
 logging:
   level:
     com.zson.ssmframework.mapper: trace
+    com.favorites: DEBUG
     org:
+      hibernate: ERROR
+      springframework.web: INFO
       springframework: DEBUG
+  path: /user/local/log

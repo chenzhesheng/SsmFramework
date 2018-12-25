@@ -1,4 +1,4 @@
-package com.zson.ssmframework.action;
+package com.zson.ssmframework.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.zson.ssmframework.bean.Student;
@@ -21,7 +21,7 @@ public class StudentController {
     StudentService studentService;
 
     @RequestMapping("/listStudent")
-        @CachePut( key = "listStudent",unless="#result==null")
+        @CachePut( key = "'listStudent'",unless="#result==null")
         public String listStudent(Model model){
             PageHelper.startPage(1,3);
             List<Student> students = studentService.findStudentAll();

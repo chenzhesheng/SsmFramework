@@ -1,4 +1,4 @@
-package com.zson.ssmframework.action;
+package com.zson.ssmframework.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
